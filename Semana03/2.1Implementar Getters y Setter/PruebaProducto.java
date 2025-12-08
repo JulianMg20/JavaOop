@@ -14,14 +14,18 @@ public class PruebaProducto {
 
         System.out.print("Ingrese precio: ");
         p.setPrecio(sc.nextDouble());
+        sc.nextLine(); // Limpia el salto de línea pendiente
 
         System.out.print("Ingrese stock: ");
         p.setStock(sc.nextInt());
 
-        System.out.println("\n=== Información del producto ===");
+        System.out.println("\n== Información del producto ==");
         System.out.println("Código: " + p.getCodigo());
         System.out.println("Nombre: " + p.getNombre());
         System.out.println("Precio: " + p.getPrecio());
         System.out.println("Stock: " + p.getStock());
+
+        sc.close(); // Buena práctica: cerrar el Scanner
     }
 }
+
